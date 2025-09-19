@@ -23,7 +23,7 @@ jobs:
         run: echo java -version
 
       - name: Compile Java files
-        run: javac api/**/*.java
+        run: javac api/*.java
 
       - name: List .class files
-        run: ls src/**/*.class || echo "No .class files found"
+        run: ls api/*.class || echo "No .class files found"
