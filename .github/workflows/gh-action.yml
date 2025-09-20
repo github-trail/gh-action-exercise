@@ -1,0 +1,19 @@
+name: gh-action
+on:
+  push:
+    paths:
+      - ".github/workflows/gh-action.yml"
+  workflow_dispatch:
+
+jobs:
+  cli:
+    runs-on: ubuntu-latest
+    steps:
+      - run: env
+      - run: pwd
+      - run: gh --version
+      - run: gh auth status
+      - run: gh repo list
+      - run: gh repo view
+      - run: gh issue list
+      - run: gh workflow list
