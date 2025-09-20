@@ -16,7 +16,7 @@ jobs:
       - run: pwd
       - run: gh --version
       - run: echo $GITHUB_TOKEN
-      - run: echo GITHUB_TOKEN | gh auth login --with-token
+      - run: echo "$GITHUB_TOKEN" | gh auth login --with-token
       - run: gh auth status
       - run: gh repo list
       - run: gh issue list
